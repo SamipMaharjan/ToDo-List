@@ -2,7 +2,27 @@ import React from 'react'
 import { useState, useEffect, useRef, useReducer } from 'react'
 
 export default function Default(props) {
+  //Declaring stateVariables for storing time. 
+  const [hours, setHours] = useState('');
+  const [minutes, setMinutes] = useState('');
 
+  useEffect(() => {
+    const displayDate = () => {
+      const date = new Date();
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      setHours(hours);
+      setMinutes(minutes);
+    };
+
+    const interval = setInterval(displayDate, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  
     // For setting the task name 
   const [taskName, setTaskName] = useState([]);
 
@@ -117,6 +137,9 @@ export default function Default(props) {
 
   return (
     <>
+    <div className="date">
+      Current Time:: {hours}: {minutes}
+    </div>
     <section id='todo-block'>
 
       <div className="heading">
