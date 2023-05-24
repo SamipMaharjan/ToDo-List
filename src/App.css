@@ -1,0 +1,107 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.tasks, .heading, .input{
+  color: white;
+}
+
+.tasks, .input, button{
+  font-size: 1.5rem;
+}
+.tasks{
+  display: flex;
+  justify-content: flex-start;
+}
+.tasks li{
+  list-style: none;
+  text-decoration: none;
+}
+.input input{
+  height: 30px;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+.heading{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+input[type="checkbox"]{
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.tasks ul li{
+  display: flex;
+  align-items: center;
+}
+.tasks ul li p{
+  margin: 0 10px;
+  
+}
+.editing{
+  display: flex;
+  align-items: center;
+}
+.editing .dot{
+  display: none;
+  height: 3px;
+  width: 3px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0px 1px;
+}
+.editing .padding{
+  padding: 15px 10px; 
+  display: flex; 
+}
+.tasks ul li:hover .dot{
+  display: block;
+}
+
+/* The outer box  */
+#todo-block{
+  background-color: #38487E;
+  padding: 25px;
+  height: 560px; 
+  width: 420px; 
+  position: relative;
+  border-radius: 10px;
+}
+/* The outer box  */
+
+/* Input section  */
+.input{
+  display: flex; 
+}
+
+.input input{
+  width: 80%;
+  border: 0; 
+
+}
+
+.input button{
+  height: 30px;
+  background-color: white;
+  color: black;
+  border: 0;
+  font-size: 1rem;
+  width: 80px;
+  margin-left: 1px;
+}
+/* Input section  */
+
+/* Task Section  */
+#checkbox{
+  background-color: #2ecc71;
+}
+/* Task Section  */
+/* .Todo */
+.To-do{
+  position: absolute; 
+  bottom: 10%; 
+}
+/* .Todo  */
